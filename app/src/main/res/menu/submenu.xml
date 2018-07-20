@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/csubmenu3"
+        android:title="多选菜单">
+        <menu>
+            <group android:checkableBehavior="all" >
+                <item android:title="子菜单1"/>
+                <item android:title="子菜单2"/>
+                <item android:title="子菜单3"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

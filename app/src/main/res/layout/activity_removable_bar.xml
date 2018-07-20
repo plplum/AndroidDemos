@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:focusable="true"  
+    android:focusableInTouchMode="true" >
+
+    
+    <include android:id="@+id/title_bar"
+         layout="@layout/search_layout"
+         android:visibility="gone"/>
+    
+
+    <ScrollView
+        android:id="@+id/content_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            
+          <FrameLayout
+            android:id="@+id/main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/base_main_bg_color" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/appmain_subject_1" />
+
+             <include android:id="@+id/sub_title_bar"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+		         layout="@layout/search_layout"
+		         android:layout_gravity="bottom"
+		         android:background="@android:color/transparent"
+		         android:visibility="visible"/>
+        </FrameLayout>
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+        
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+		<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="dfdfdf" />
+				
+        </LinearLayout>
+ </ScrollView>
+        
+
+</LinearLayout>

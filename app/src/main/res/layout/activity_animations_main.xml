@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/base_main_bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/actionbar_background" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip" />
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/refresh_whirl" />
+    
+    <Button android:id="@+id/button_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="渐变动画（alpha）"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"/>
+    
+    <Button android:id="@+id/button_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="缩放动画（scale）"
+        android:layout_below="@id/button_alpha"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"/>
+    
+    <Button android:id="@+id/button_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="位移动画（translate）"
+        android:layout_below="@id/button_scale"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"/>
+    
+    <Button android:id="@+id/button_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="旋转动画（rotate）"
+        android:layout_below="@id/button_translate"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"/>
+    
+    <Button android:id="@+id/button_rotate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="旋转动画2（rotate）"
+        android:layout_below="@id/button_rotate"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"/>
+    
+</RelativeLayout>

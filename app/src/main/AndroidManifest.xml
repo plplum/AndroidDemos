@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.demos">
+
+    <!-- 读取系统联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" /> -->
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name=".city.app.Application"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Ct5CXh7GN4ZkCYzAIQGr3Ax6" />
+
+        <activity
+            android:name=".SplashscreenActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baidu.mapapi.search.poi.PlaceCaterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="POI搜索功能"
+            android:screenOrientation="sensor" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".contacts.activity.ContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".guidepage.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".pulltorefresh.PullToRefreshActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".city.activity.SelectCtiyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".refreshview.activity.RefreshableListViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".refreshview.activity.RefreshableScrollViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".dynamicloading.activity.RuningManActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".slidingmenu.activity.SlidingMenuMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".slidingmenu.activity.SlidingMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActionBarTheme" />
+        <activity
+            android:name=".slidingmenu.activity.DeletableListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".dialog.DialogsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".popupwindow.PopupWindowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.MenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.CustomMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.TabHostMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.AActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.BActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.CActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.DActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".menu.EActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".actionbar.activity.ActionBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActionBarTheme" />
+        <!-- android:theme="@style/HoloLightTheme"/> -->
+
+        <activity
+            android:name=".actionbar.activity.GroupChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HoloLightTheme" />
+        <activity
+            android:name=".actionbar.activity.SearchViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".actionbar.activity.CustomActionBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HoloLightTheme" />
+        <activity
+            android:name=".autoplay.activity.AutoPlayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".baidumap.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".fragment.statical.StaticalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".fragment.dynamical.DynamicalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".fragment.list.ListTitleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".fragment.list.ListDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".fragment.dialog.DialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".theme.ChangeThemeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".language.ChangeLanguageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".http.HttpMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".http.HttpDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".http.MultipleDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".socket.SocketClientActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".broadcast.BroadCastActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".broadcast.TestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".service.onstart.ServiceOnStartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".service.onbind.ServiceOnBindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".notifications.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".notifications.CustomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".notifications.ProgressAcitivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".contentprovider.ContentProviderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".horizontalmenu.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".navigationmenu.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".xmlparse.XmlParseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".json.JsonParseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".citylist.CityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".slidebottommenu.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HoloLightTheme" />
+        <activity
+            android:name=".fragmentmenu.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".categorymenu.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".removablebar.ShowHideSearchBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".removablebar.ShowHideSearchBarActivity1"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".loadimages.LoadImagesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".progresswebview.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".headicon.activity.HeadIconActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".http.HttpUploadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".province.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".volleydemo.VolleyMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".drawerlayout.DrawerLayoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".animations.AnimationsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".webservice.WebServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".sharephoto.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".sharephotonew.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".sharephotonew.ImagePagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".gridview.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".recycleview.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".recycleview.StaggeredGridLayoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".statusbar.StatusBarActivity"
+            android:theme="@style/main_activity_theme" />
+        <activity
+            android:name=".statusbar.ImageTranslucentBarActivity"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".statusbar.ColorTranslucentBarActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name=".toolbar.MainActivity"
+            android:theme="@style/no_actionbar_theme1" />
+        <!-- android:theme="@style/no_actionbar_theme" /> -->
+
+        <activity
+            android:name=".toolbar.AppBarActivity"
+            android:theme="@style/no_actionbar_theme1" />
+        <activity
+            android:name=".toolbar.AppBarActivity1"
+            android:theme="@style/no_actionbar_theme1" />
+
+        <activity
+            android:name=".toolbar.AppBarActivity2"
+            android:theme="@style/no_actionbar_theme1" />
+
+        <activity
+            android:name=".toolbar.AppBarActivity3"
+            android:theme="@style/no_actionbar_theme1" />
+
+        <activity
+            android:name=".toolbar.BilbiliActivity"
+            android:theme="@style/no_actionbar_theme1" />
+        <activity
+            android:name=".segmentedgroup.MainActivity"
+            android:theme="@style/no_actionbar_theme1" />
+        <activity
+            android:name=".toolbar.AppBarLayoutActivity"
+            android:theme="@style/no_actionbar_theme1" />
+
+        <service
+            android:name=".service.onstart.PlayMusicService"
+            android:enabled="true">
+
+            <!--
+           <intent-filter>
+               <action android:name="com.example.demos.service.onstart.playMusicService" />
+           </intent-filter>
+            -->
+        </service>
+        <service
+            android:name=".service.onbind.BindMusicService"
+            android:enabled="true" />
+
+        <!--
+            <provider
+            android:name=".contentprovider.TeacherContentProvider"
+            android:authorities="test.android.contentProvider" />
+        -->
+        <activity
+            android:name=".retrofit.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".okhttp3.activity.Main3Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".nestedscrollview.activity.Main4Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bottomnavigation.MainActivity5"
+            android:label="@string/title_activity_main5"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".changetheme.MainActivity6"
+            android:label="切换主题"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".slidable.SlidableActivity"
+            android:label="右滑返回"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".slidable.MainActivity6"
+            android:label="右滑返回"
+            android:theme="@style/slideactivity"
+            ></activity>
+
+        <activity
+            android:name=".splashscreen.MainActivity"
+            android:label="右滑返回">
+        </activity>
+
+        <activity
+            android:name=".toolbar1.MainActivity"
+            android:label="Toobar">
+        </activity>
+
+    </application>
+
+</manifest>

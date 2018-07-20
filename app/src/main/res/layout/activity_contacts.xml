@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_main_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/actionbar_background" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:layout_below="@id/title_bar"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/list_group_item_background_selected" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:textStyle="bold"
+            android:text="A"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/contacts_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:fadingEdge="none" >
+    </ListView>
+
+
+    <com.example.demos.contacts.view.LetterListView
+	      android:id="@+id/letter_view"
+	      android:layout_width="30.0dip"
+	      android:layout_height="fill_parent"
+	      android:layout_gravity="right"
+	      android:layout_marginBottom="5dip"
+	      android:layout_marginTop="45dip"
+	      android:layout_alignParentRight="true"
+	      android:layout_marginRight="2dip" />
+
+    <!--
+    <Button
+        android:id="@+id/alphabetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/a_z"
+        />
+
+    <RelativeLayout
+        android:id="@+id/section_toast_layout"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/section_toast"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/section_toast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            />
+    </RelativeLayout>
+     -->
+
+
+</RelativeLayout>

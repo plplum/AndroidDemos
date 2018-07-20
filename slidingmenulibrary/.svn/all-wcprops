@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/androidclient/!svn/ver/116/trunk/SmartHomeStudio/slidingmenulibrary
+END
+proguard-rules.pro
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/proguard-rules.pro
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/.gitignore
+END
+build.gradle
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/build.gradle
+END
+slidingmenulibrary.iml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/androidclient/!svn/ver/116/trunk/SmartHomeStudio/slidingmenulibrary/slidingmenulibrary.iml
+END

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+   	android:focusableInTouchMode="true"
+    android:background="@color/base_main_bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/actionbar_background" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip" />
+    </RelativeLayout>
+    
+
+     <RelativeLayout
+         android:id="@+id/relativeLayout1"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/relativeLayout2"
+         android:paddingTop="10dip" >
+
+         <TextView
+             android:id="@+id/textView1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/editText_url"
+             android:layout_alignBottom="@+id/editText_url"
+             android:layout_alignParentLeft="true"
+             android:layout_marginLeft="18dp"
+             android:text="URL: " />
+
+         <EditText
+             android:id="@+id/editText_url"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="18dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="10dp"
+             android:layout_toRightOf="@+id/textView1"
+             android:ems="10" />
+
+         <TextView
+             android:id="@+id/TextView2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/textView1"
+             android:layout_marginLeft="18dp"
+             android:text="Result: " />
+
+         <EditText
+             android:id="@+id/editText_result"
+             android:layout_width="fill_parent"
+             android:layout_height="200dp"
+             android:layout_below="@+id/editText_url"
+             android:layout_marginBottom="140dp"
+             android:layout_marginLeft="3dp"
+             android:layout_marginRight="10dp"
+             android:layout_toRightOf="@+id/TextView2"
+             android:ems="10"
+             android:inputType="textMultiLine" />
+     </RelativeLayout>
+     
+     <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeLayout1">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/action_add_contacts" />
+    </ScrollView>
+     
+     <Button
+        android:id="@+id/button_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Request" />
+
+     <Button
+         android:id="@+id/button01"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/button_request"
+         android:layout_alignParentBottom="true"
+         android:text="下载" />
+     
+      <Button
+         android:id="@+id/button_upload"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/button01"
+         android:layout_alignParentBottom="true"
+         android:text="上传" />
+      
+        <Button
+         android:id="@+id/button_xutil"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/button_upload"
+         android:layout_alignParentBottom="true"
+         android:text="xutil Req" />
+</RelativeLayout>

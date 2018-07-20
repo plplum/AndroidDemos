@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/action_search"
+        android:showAsAction="always|collapseActionView"
+        android:title="Search"
+        />
+    
+    <item
+        android:id="@+id/action_plus"
+        android:actionProviderClass="com.example.demos.actionbar.provider.MoreButtonActionProvider"
+        android:icon="@drawable/action_more"
+        android:showAsAction="always"
+        android:title="@null"
+        />
+	
+    
+    
+    
+    <!-- 如果使用的是V7  应该把android:showAsAction换成app:showAsAction。
+    xmlns:app="http://schemas.android.com/apk/res-auto"  
+     -->
+</menu>

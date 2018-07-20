@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/actionbar_background" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip" />
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/btn_show_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示自定义通知栏" />
+
+    <Button
+        android:id="@+id/btn_show_custom_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示带按钮自定义 通知栏" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注意：通知栏按钮只适合3.0及以上版本" />
+
+</LinearLayout>

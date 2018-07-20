@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app1="http://schemas.android.com/apk/res/com.example.demos"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/base_main_bg_color"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/actionbar_background" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip" 
+        android:background="@color/white">
+
+        <com.example.demos.headicon.view.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/login_ak"
+            app:border_color="#FFFFFF"
+       		app:border_width="2dp"  />
+        
+        <TextView
+            android:id="@+id/nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="世纪狂魔@1号" 
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:layout_toRightOf="@id/icon"/>
+
+        
+         <TextView
+            android:id="@+id/introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="狂魔大会本月底召开，请魔头们准时参加" 
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/icon"
+            android:layout_below="@id/nick_name"/>
+        
+    </RelativeLayout>
+    
+    <View android:layout_width="fill_parent" android:layout_height="2dp"/>
+
+   <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip" 
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/icon02"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/login_ak"/>
+        
+        <TextView
+            android:id="@+id/nick_name02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="皮卡丘的王国" 
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:layout_toRightOf="@id/icon02"/>
+
+        
+         <TextView
+            android:id="@+id/introduction02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="皮卡丘世界" 
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/icon02"
+            android:layout_below="@id/nick_name02"/>
+        
+    </RelativeLayout>
+
+    <View android:layout_width="fill_parent" android:layout_height="2dp"/>
+
+   <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip" 
+        android:background="@color/white">
+
+         <com.example.demos.headicon.view.RoundImageView
+            android:id="@+id/icon03"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/login_ak"
+            app1:borderRadius="10dp"
+            app1:type="round" />
+        
+        <TextView
+            android:id="@+id/nick_name03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="皮卡丘的王国" 
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:layout_toRightOf="@id/icon03"/>
+
+        
+         <TextView
+            android:id="@+id/introduction03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="皮卡丘世界" 
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/icon03"
+            android:layout_below="@id/nick_name03"/>
+        
+    </RelativeLayout>
+   
+</LinearLayout>

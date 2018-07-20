@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/src/main/java/com/jeremyfeinstein/slidingmenu/lib/app
+END
+SlidingActivityBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/src/main/java/com/jeremyfeinstein/slidingmenu/lib/app/SlidingActivityBase.java
+END
+SlidingActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/src/main/java/com/jeremyfeinstein/slidingmenu/lib/app/SlidingActivity.java
+END
+SlidingFragmentActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/src/main/java/com/jeremyfeinstein/slidingmenu/lib/app/SlidingFragmentActivity.java
+END
+SlidingActivityHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/src/main/java/com/jeremyfeinstein/slidingmenu/lib/app/SlidingActivityHelper.java
+END
+SlidingListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/src/main/java/com/jeremyfeinstein/slidingmenu/lib/app/SlidingListActivity.java
+END
+SlidingPreferenceActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/androidclient/!svn/ver/63/trunk/SmartHomeStudio/slidingmenulibrary/src/main/java/com/jeremyfeinstein/slidingmenu/lib/app/SlidingPreferenceActivity.java
+END

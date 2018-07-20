@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/base_main_bg_color"
+    android:orientation="vertical">
+<!--
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+-->
+
+  <!--  <android.support.v7.widget.Toolbar
+        android:id="@+id/id_toolbar"
+        app:title="App Title"
+        app:titleTextColor="@color/white"
+        app:subtitle="Sub Title"
+        app:navigationIcon="@drawable/ic_launcher"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/red"/>-->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_toolbar"
+        app:title="App Title"
+        app:titleTextColor="@color/white"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/red">
+
+        <ImageView
+            android:id="@+id/btn_refresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/refreshicon_titlebar"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp" />
+
+
+        <TextView
+            android:id="@+id/toolbar_edit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:text="自定义标题"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/toolbar_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp"
+            android:text="编辑"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <Button
+        android:layout_below="@id/id_toolbar"
+        android:id="@+id/btn_appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AppBarLayout"/>
+
+
+    <Button
+        android:layout_below="@id/btn_appbarlayout"
+        android:id="@+id/btn_appbarlayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AppBarLayout + CollapsingToolbarLayout"/>
+
+
+    <Button
+        android:layout_below="@id/btn_appbarlayout_1"
+        android:id="@+id/btn_appbarlayout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CollapsingToolbarLayout"/>
+
+    <Button
+        android:layout_below="@id/btn_appbarlayout_2"
+        android:id="@+id/btn_appbarlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AppBarLayout + TableLayout"/>
+
+
+    <Button
+        android:layout_below="@id/btn_appbarlayout1"
+        android:id="@+id/btn_appbarlayout_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AppBarLayout + CollapsingToolbarLayout - 2"/>
+
+    <Button
+        android:layout_below="@id/btn_appbarlayout_5"
+        android:id="@+id/btn_appbarlayout_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AppBarLayout + CollapsingToolbarLayout - 3"/>
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="name">
+        <item>splash screen</item>
+        <item>引导页面</item>
+        <item>联系人列表</item>
+        <item>城市列表</item>
+        <item>下拉刷新</item>
+        <item>下拉刷新和上拉加载 </item>
+        <item>动态小人 </item>
+        <item>SlidingMenu</item>
+        <item>侧滑界面</item>
+        <item>滑动删除List</item>
+        <item>Dialog</item>
+        <item>PopupWindow</item>
+        <item>Menu和TabHost</item>
+        <item>ActionBar</item>
+        <item>自动播放的ViewPager</item>
+        <item>baidu地图</item>
+        <item>Fragment</item>
+        <item>风格与主题（style and theme）</item>
+        <item>语言切换</item>
+        <item>Http请求</item>
+        <item>Socket通信</item>
+        <item>BroadCast</item>
+        <item>Service</item>
+        <item>Notification</item>
+        <item>ContentProvider</item>
+        <item>水平滚动菜单1</item>
+        <item>水平滚动菜单2</item>
+        <item>XML解析</item>
+        <item>Json解析</item>
+        <item>城市选择、定位、热门城市</item>
+        <item>滑动界面、底部菜单渐变</item>
+        <item>多级下拉菜单</item>
+        <item>商品分类菜单</item>
+        <item>显示隐藏搜索栏</item>
+        <item>加载图片</item>
+        <item>Webview浏览器</item>
+        <item>头像上传显示</item>
+        <item>省市三级联动</item>
+        <item>Volley使用</item>
+        <item>DrawerLayout侧滑菜单</item>
+        <item>动画演示</item>
+        <item>WebService使用</item>
+        <item>朋友圈</item>
+        <item>带边框的gridview</item>
+        <item>RecycleView</item>
+        <item>状态栏标题栏</item>
+        <item>ToolBar</item>
+        <item>SegmentedGroup</item>
+        <item>Retrofit+RXJava</item>
+        <item>okhttp3</item>
+        <item>上滑隐藏toolbar</item>
+        <item>滑动隐藏底部导航栏</item>
+        <item>日夜模式切换</item>
+        <item>SlidableActivity</item>
+        <item>启动页倒计时</item>
+        <item>下拉刷新Toolbar渐变</item>
+        <!-- 
+        <item>论坛</item>
+        <item>朋友圈</item>
+        <item>PreferenceScreen</item>
+        <item>Database</item>
+        <item>常用工具类集合</item>
+        --> 
+    </string-array>
+    
+
+    <string-array name="description">
+        <item>启动画面演示</item>
+        <item>系统首次运行的引导页面</item>
+        <item>可按字母快速查找的联系人列表</item>
+        <item>可按字母快速查找的城市和输入关键字搜索城市</item>
+        <item>下拉当前View可以刷新数据列表</item>
+        <item>下拉当前View可以刷新数据列表，下拉加载更多数据</item>
+        <item>仿美团顺丰动态加载时小人跑动 </item>
+        <item>类似QQ侧滑页面和删除list item的效果</item>
+        <item>类似QQ侧滑页面效果</item>
+        <item>可以左划显示删除按钮的List</item>
+        <item>基本Dialog和自定义Dialog</item>
+        <item>演示PopupWindow的使用</item>
+        <item>基本Menu和自定义Menu的使用</item>
+        <item>演示ActionBar的使用</item>
+        <item>图片定时自动播放的ViewPager</item>
+        <item>baidu地图使用演示</item>
+        <item>Fragment使用演示</item>
+        <item>演示风格与主题使用效果</item>
+        <item>语言切换演示</item>
+        <item>请求数据和图片、下载文件支持多线程断点续传</item>
+        <item>Socket通信演示</item>
+        <item>BroadCast使用演示</item>
+        <item>Service使用演示</item>
+        <item>通知栏使用演示</item>
+        <item>自定义ContentProvider的使用</item>
+        <item>可水平滚动的菜单</item>
+        <item>ViewPager+Fragment实现可水平滚动的菜单</item>
+        <item>XML解析示例</item>
+        <item>Json解析示例</item>
+        <item>城市选择、定位、热门城市</item>
+        <item>TabHost和JazzyViewPager实现滑动界面、底部菜单渐变</item>
+        <item>使用Fragment实现下拉菜单</item>
+        <item>商品分类菜单</item>
+        <item>显示隐藏搜索栏</item>
+        <item>异步加载图片</item>
+        <item>带进度条的浏览器</item>
+        <item>头像上传显示</item>
+        <item>省市三级联动菜单</item>
+        <item>String/Json/XMl/Image request</item>
+        <item>DrawerLayout侧滑菜单</item>
+        <item>简单动画演示</item>
+        <item>WebService使用演示</item>
+        <item>朋友圈展示</item>
+        <item>带边框的gridview</item>
+        <item>RecycleView下拉刷新、上拉加载，滑动删除</item>
+        <item>状态栏标题栏</item>
+        <item>ToolBar例子</item>
+        <item>SegmentedGroup</item>
+        <item>Retrofit + RXJava</item>
+        <item>okhttp3</item>
+        <item>上滑NestedScrollView隐藏toolbar</item>
+        <item>滑动隐藏底部导航栏BottomNavigation</item>
+        <item>日夜模式切换</item>
+        <item>向右滑动关闭Activity</item>
+        <item>启动页倒计时</item>
+        <item>下拉刷新Toolbar渐变、沉浸式菜单</item>
+    </string-array>
+    
+    
+    <string-array name="kind_kuaichan">
+        <item>肯德基</item>
+        <item>麦当劳</item>
+    </string-array>
+    <string-array name="kind_zhongchan">
+        <item>川菜</item>
+        <item>粤菜</item>
+        <item>湘菜</item>
+        <item>火锅</item>
+    </string-array>
+    <string-array name="kind_xichan"></string-array>
+    
+</resources>

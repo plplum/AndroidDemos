@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="Theme.Light" parent="android:Theme.NoTitleBar">
+	   <item name="mainMenuBarBg">@style/mainMenuBarBgLight</item>
+	   <item name="loadingProgressDialogStyle">@android:style/Widget.ProgressBar.Inverse</item>    
+	</style>
+	
+
+	<style name="Theme.Dark" parent="android:Theme.NoTitleBar">
+	   <item name="mainMenuBarBg">@style/mainMenuBarBgDark</item>
+	   <item name="loadingProgressDialogStyle">@android:style/Widget.ProgressBar.Inverse</item>    
+	</style>
+
+	
+</resources>

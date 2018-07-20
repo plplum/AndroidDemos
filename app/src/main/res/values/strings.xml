@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidDemos</string>
+
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+    <string name="app_version_info">版本信息： V1.0\n更新时间：2015.7.28\n\n更新日志：\n1.新增联系人检索功能</string>
+    <string name="app_tutorial_info">下次跳过此界面 </string>
+    <string name="app_welcome_info">Welcome to study these demos!</string>
+    <string name="all_rights_reserved">Copyright © 2013-2015. All Rights Reserved.</string>
+    <string name="setting_about_description">All kinds of android demos.</string>
+    <string name="biz_plugin_weather_search_city_hint">搜索全国城市(中文/拼音)</string>
+
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+
+
+    <string name="pushmsg_center_no_more_msg">已经到底啦</string>
+    <string name="pushmsg_center_pull_up_text">松开加载更多</string>
+    <string name="pushmsg_center_pull_down_text">下拉可以刷新</string>
+    <string name="pushmsg_center_pull_release_text">松开获取更多</string>
+    <string name="pushmsg_center_pull_down_update_time">最后更新时间 : </string>
+    <string name="pushmsg_center_load_more_ongoing_text">正在加载中</string>
+    <string name="xsearch_loading">正在加载中…</string>
+
+    <!-- 加载图片失败时的提示文本 -->
+    <string name="picture_load_image_failed">点击屏幕，重新加载</string>
+    <!-- 加载中提示 -->
+    <string name="picture_image_loading">正在加载…</string>
+
+    <!-- 下拉刷新和上拉加载更多的文本 -->
+    <string name="pull_to_refresh_header_hint_normal">@string/pushmsg_center_pull_down_text</string>
+    <string name="pull_to_refresh_header_hint_normal2">上拉可以刷新</string>
+    <string name="pull_to_refresh_header_hint_ready">松开后刷新</string>
+    <string name="pull_to_refresh_header_hint_loading">@string/pushmsg_center_load_more_ongoing_text</string>
+    <string name="pull_to_refresh_header_last_time">@string/pushmsg_center_pull_down_update_time</string>
+    <string name="pull_to_refresh_footer_hint_ready">松开载入更多</string>
+    <string name="pull_to_refresh_refreshing_label">@string/pull_to_refresh_header_hint_loading</string>
+    <string name="pull_to_refresh_no_more_data">@string/pushmsg_center_no_more_msg</string>
+    <string name="pull_to_refresh_network_error">网络不给力，请检查网络</string>
+
+    <!-- 图片保存的文字 -->
+    <string name="picture_save_succeed">图片已保存到相册</string>
+    <string name="picture_save_fail">保存图片失败</string>
+    <string name="picture_next_album">下一组：</string>
+    <string name="picture_previous_album">上一组：</string>
+
+    <dimen name="slidingmenu_offset">60dp</dimen>
+
+
+    <string name="main_menu_setting">设置</string>
+    <string name="main_menu_about">关于</string>
+    <string name="main_menu_exit">退出</string>
+    <string name="main_menu_advise">意见反馈</string>
+
+
+    <string name="main_news">消息</string>
+    <string name="main_home">首页</string>
+    <string name="more">更多</string>
+    <string name="main_manage_date">时间</string>
+    <string name="main_friends">好友</string>
+
+
+    <string name="category_all">推荐</string>
+    <string name="category_all_my">推荐</string>
+    <string name="category_society">社会</string>
+    <string name="category_subscribe">订阅</string>
+    <string name="category_video">视频</string>
+    <string name="category_health">健康</string>
+    <string name="category_sports">体育</string>
+    <string name="category_tech">科技</string>
+    <string name="category_car">汽车</string>
+    <string name="category_entertainment">娱乐</string>
+    <string name="category_finance">财经</string>
+    <string name="category_military">军事</string>
+    <string name="category_world">国际</string>
+    <string name="category_hot">热点</string>
+    <string name="category_positive">正能量</string>
+    <string name="category_essay_joke">段子</string>
+    <string name="category_image_funny">趣图</string>
+    <string name="category_image_ppmm">美女</string>
+    <string name="category_movie">电影</string>
+    <string name="category_digital">数码</string>
+    <string name="category_news_fashion">时尚</string>
+    <string name="category_rumor">辟谣</string>
+    <string name="category_marvel">奇葩</string>
+    <string name="category_news_game">游戏</string>
+    <string name="category_news_travel">旅游</string>
+    <string name="category_news_baby">育儿</string>
+    <string name="category_fitness">减肥</string>
+    <string name="category_news_regimen">养生</string>
+    <string name="category_news_food">美食</string>
+    <string name="category_government">政务</string>
+    <string name="category_news_history">历史</string>
+    <string name="category_news_discovery">探索</string>
+    <string name="category_news_story">故事</string>
+    <string name="category_news_essay">美文</string>
+    <string name="category_emotion">情感</string>
+    <string name="category_essay_saying">语录</string>
+    <string name="category_image_wonderful">美图</string>
+    <string name="category_news_house">家居</string>
+    <string name="category_news_home">房产</string>
+    <string name="category_funny">搞笑</string>
+    <string name="category_news_astrology">星座</string>
+    <string name="category_news_culture">文化</string>
+    <string name="category_graduate">毕业生</string>
+
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+
+
+    <string name="text1">鱼那么信任水，
+水却煮了鱼。
+叶子那么信任风，
+风却吹落了叶。
+
+人心的冷暖，
+总是一直变幻。
+熟悉的陌生了，
+陌生的走远了。
+
+
+
+
+人与人之间，
+全靠一颗心，
+情与情之间，
+全凭一寸真。
+
+落叶知秋，落难知友！
+人生不易，
+且行且珍惜。
+
+
+
+人生是一个过程，像朝阳至日暮，
+又好像春花、夏夜、秋日、冬雪，
+一年四季的轮换。
+如果把短短几十年的人生分为两部分，
+那就是上半场和下半场。
+
+人生的上半场讲“升”：
+升学历
+升职位
+升业绩
+升财富
+比上升！
+
+
+
+而下半场却讲“降”：
+降血压
+降血糖
+降血脂
+降尿酸
+降胆固醇
+比下降！
+
+
+
+两场都嬴的法则是
+没病也要体检，
+不渴也要喝水，
+再烦也要想通，
+有理也要让人，
+
+有权也要低调，
+不累也要休息，
+不富也要知足，
+再忙也要锻炼！
+
+
+
+在人生的两个半场中
+无论生活是苦是甜，真诚永远；
+无论道路是直是弯，美好永远；
+无论生命是长是短，善良永远；
+无论离你是近是远，我的祝福永远！
+
+此生只愿
+今天的你：快乐！
+今年的你：顺利！
+今生的你：健康！
+今世的你：幸福！
+        在人生的两个半场中
+无论生活是苦是甜，真诚永远；
+无论道路是直是弯，美好永远；
+无论生命是长是短，善良永远；
+无论离你是近是远，我的祝福永远！
+</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main5">MainActivity5</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+</resources>
