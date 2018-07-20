@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements OnBannerListener 
 
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                System.out.println("6666666666666666666");
+                System.out.println("666666666666666666666666");
                 refreshlayout.finishRefresh(2000);
 
             }
