@@ -112,4 +112,11 @@
         android:layout_height="wrap_content"
         android:text="AppBarLayout + CollapsingToolbarLayout - 3"/>
 
+    <Button
+        android:layout_below="@id/btn_appbarlayout_6"
+        android:id="@+id/btn_appbarlayout_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AppBarLayout + CollapsingToolbarLayout - 4"/>
+
 </RelativeLayout>

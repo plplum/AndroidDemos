@@ -367,6 +367,10 @@
             android:theme="@style/no_actionbar_theme1" />
 
         <activity
+            android:name=".toolbar.AppBarActivity4"
+            android:theme="@style/no_actionbar_theme2" />
+
+        <activity
             android:name=".toolbar.BilbiliActivity"
             android:theme="@style/no_actionbar_theme1" />
         <activity
