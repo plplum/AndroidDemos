@@ -1,5 +1,7 @@
 package com.example.demos.toolbar;
 
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -15,6 +17,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.demos.R;
+import com.example.demos.toolbar1.GlideImageLoader;
+import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.Transformer;
+import com.youth.banner.listener.OnBannerListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 公司：深圳市中泰智丰物联网科技有限公司
@@ -24,7 +34,7 @@ import com.example.demos.R;
  * 时间：2017/7/22
  * 版本：V0.0.1
  */
-public class AppBarActivity4 extends AppCompatActivity {
+public class AppBarActivity4 extends AppCompatActivity implements OnBannerListener {
 
 	AppBarLayout appBarLayout;
 
@@ -34,14 +44,15 @@ public class AppBarActivity4 extends AppCompatActivity {
 
 	Toolbar toolbar;
 
+	Banner banner;
 
 	TextView textView;
 
 	private TabLayout mTabLayout;
 	private ViewPager mViewPager;
 
-	private Fragment[] mFragmentArrays = new Fragment[2];
-	private String[] mTabTitles = new String[2];
+	private Fragment[] mFragmentArrays = new Fragment[6];
+	private String[] mTabTitles = new String[6];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +78,8 @@ public class AppBarActivity4 extends AppCompatActivity {
 		//);
 
 
+		banner = (Banner) findViewById(R.id.banner);
+		initBanner();
 
 
 		appBarLayout = (AppBarLayout) findViewById(R.id.AppBarLayout01);
@@ -81,9 +94,17 @@ public class AppBarActivity4 extends AppCompatActivity {
 
 		mTabTitles[0] = "Menu11";
 		mTabTitles[1] = "Menu22";
+		mTabTitles[2] = "Menu33";
+		mTabTitles[3] = "Menu44";
+		mTabTitles[4] = "Menu55";
+		mTabTitles[5] = "Menu66";
 
 		mFragmentArrays[0] = AuthorInfoFragment.newInstance();
 		mFragmentArrays[1] = AuthorInfoFragment.newInstance();
+		mFragmentArrays[2] = AuthorInfoFragment.newInstance();
+		mFragmentArrays[3] = AuthorInfoFragment.newInstance();
+		mFragmentArrays[4] = AuthorInfoFragment.newInstance();
+		mFragmentArrays[5] = AuthorInfoFragment.newInstance();
 
 
 
@@ -154,6 +175,33 @@ public class AppBarActivity4 extends AppCompatActivity {
 		});
 	}
 
+	private void initBanner(){
+		//加载本地资源方法
+		Uri uri1 = resourceIdToUri(this, R.drawable.banner_a);
+		Uri uri2 = resourceIdToUri(this, R.drawable.banner_b);
+		Uri uri3 = resourceIdToUri(this, R.drawable.banner_c);
+		List<Uri> imagesUrl = new ArrayList<>();
+		imagesUrl.add(uri1);
+		imagesUrl.add(uri2);
+		imagesUrl.add(uri3);
+
+		//轮播广告
+        /*List<String> imagesUrl = new ArrayList<>();
+        imagesUrl.add(BANNER_URL1);
+        imagesUrl.add(BANNER_URL2);
+        imagesUrl.add(BANNER_URL3);*/
+		//Banner banner = (Banner) view.findViewById(R.id.banner);
+		banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
+		banner.setImageLoader(new GlideImageLoader());
+		banner.setImages(imagesUrl);
+		banner.setBannerAnimation(Transformer.Default);
+		//banner.setBannerTitles(titles);
+		banner.isAutoPlay(true);
+		banner.setDelayTime(5000);
+		banner.setIndicatorGravity(BannerConfig.CENTER);
+		banner.setOnBannerListener(this);
+		banner.start();
+	}
 
 	private class AuthorPagerAdapter extends FragmentPagerAdapter {
 
@@ -175,5 +223,16 @@ public class AppBarActivity4 extends AppCompatActivity {
 		public CharSequence getPageTitle(int position) {
 			return mTabTitles[position];
 		}
+	}
+
+	public static final String ANDROID_RESOURCE = "android.resource://";
+	public static final String FOREWARD_SLASH = "/";
+	public static Uri resourceIdToUri(Context context, int resourceId) {
+		return Uri.parse(ANDROID_RESOURCE + context.getPackageName() + FOREWARD_SLASH + resourceId);
+	}
+
+	@Override
+	public void OnBannerClick(int position) {
+
 	}
 }

@@ -78,17 +78,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:orientation="vertical"
-                    android:background="@drawable/scenery1"
                     android:gravity="center"
                     app:layout_collapseMode="pin"
                     app:layout_collapseParallaxMultiplier="0.7">
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="eeeeee"
-                        android:textColor="@color/red"/>
+                    <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:indicator_width="8dp"
+                        app:indicator_height="8dp"
+                        app:indicator_drawable_selected="@drawable/bg_banner_selected"/>
 
                 </LinearLayout>
 
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 app:tabGravity="fill"
-                app:tabMode="fixed"
+                app:tabMode="scrollable"
                 app:tabSelectedTextColor="@color/red"
                 app:tabTextColor="@color/white" />
 
