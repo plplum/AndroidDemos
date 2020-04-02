@@ -107,4 +107,7 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.10'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
     compile files('libs/glide-3.7.0.jar')
+
+    compile 'com.github.xiaohaibin:XBanner:1.7.3'
+    compile 'com.facebook.fresco:fresco:1.10.0'
 }

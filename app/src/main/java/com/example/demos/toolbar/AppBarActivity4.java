@@ -21,14 +21,18 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.demos.R;
+import com.example.demos.loadimages.ToolImage;
 import com.example.demos.toolbar1.GlideImageLoader;
 import com.example.demos.util.ScreenUtils;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.stx.xhb.xbanner.XBanner;
 import com.stx.xhb.xbanner.entity.LocalImageInfo;
+import com.stx.xhb.xbanner.entity.SimpleBannerInfo;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 import com.youth.banner.listener.OnBannerListener;
+import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +68,8 @@ public class AppBarActivity4 extends AppCompatActivity implements OnBannerListen
 	//获取控件
 	XBanner mXBanner;
 
+	private com.nostra13.universalimageloader.core.ImageLoader universalimageloader;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,6 +79,7 @@ public class AppBarActivity4 extends AppCompatActivity implements OnBannerListen
 
 		//Utils.setStatusBar(AppBarActivity4.this, false, true);
 
+		universalimageloader = ToolImage.initImageLoader(getApplicationContext());
 
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -133,7 +140,9 @@ public class AppBarActivity4 extends AppCompatActivity implements OnBannerListen
 
 		initBanner(mXBanner);
 
+		//网络
 		//initData();
+		//本地
 		initLocalImage();
 
 
@@ -275,76 +284,68 @@ public class AppBarActivity4 extends AppCompatActivity implements OnBannerListen
 				Toast.makeText(AppBarActivity4.this, "点击了第" + (position + 1) + "图片", Toast.LENGTH_SHORT).show();
 			}
 		});
+
+
 		//加载广告图片
 		banner.loadImage(new XBanner.XBannerAdapter() {
 			@Override
 			public void loadBanner(XBanner banner, Object model, View view, int position) {
-				//此处适用Fresco加载图片，可自行替换自己的图片加载框架
-				/*SimpleDraweeView draweeView = (SimpleDraweeView) view;
-				TuchongEntity.FeedListBean.EntryBean listBean = ((TuchongEntity.FeedListBean.EntryBean) model);
-				String url = "https://photo.tuchong.com/" + listBean.getImages().get(0).getUser_id() + "/f/" + listBean.getImages().get(0).getImg_id() + ".jpg";
-				draweeView.setImageURI(Uri.parse(url));*/
+				/*BannerData datas = (BannerData) model;
+				ImageView draweeView = (ImageView) view;
+				universalimageloader.displayImage((String) datas.getXBannerUrl(),
+						draweeView, ToolImage.getFadeOptions(
+								R.drawable.default_icon, R.drawable.ic_launcher,
+								R.drawable.ic_launcher));*/
 
-//                加载本地图片展示
+//              加载本地图片展示
                 ((ImageView)view).setImageResource(((LocalImageInfo) model).getXBannerUrl());
 			}
 		});
 	}
 
+
+	class BannerData extends SimpleBannerInfo {
+
+		Object url;
+
+		public Object getUrl() {
+			return url;
+		}
+
+		public void setUrl(Object url) {
+			this.url = url;
+		}
+
+		@Override
+		public Object getXBannerUrl() {
+			return url;
+		}
+	}
+
 	/**
 	 * 初始化数据
 	 */
-	/*private void initData() {
+	private void initData() {
 		//加载网络图片资源
-		String url = "https://api.tuchong.com/2/wall-paper/app";
-		OkHttpUtils
-				.get()
-				.url(url)
-				.build()
-				.execute(new StringCallback() {
-					@Override
-					public void onError(Call call, Exception e, int id) {
-						Toast.makeText(ClipChildrenModeActivity.this, "加载广告数据失败", Toast.LENGTH_SHORT).show();
-					}
+		//刷新数据之后，需要重新设置是否支持自动轮播
+		//mXBanner.setAutoPlayAble(data.size() > 1);
+		List<BannerData> datas = new ArrayList<>();
+		BannerData data1 = new BannerData();
+		data1.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585820241902&di=e9ffdb839546c0864978b53a382bc547&imgtype=0&src=http%3A%2F%2Fpic23.nipic.com%2F20120814%2F10618619_161417472000_2.jpg");
 
-					@Override
-					public void onResponse(String response, int id) {
-						TuchongEntity advertiseEntity = new Gson().fromJson(response, TuchongEntity.class);
-						List<TuchongEntity.FeedListBean> others = advertiseEntity.getFeedList();
-						List<TuchongEntity.FeedListBean.EntryBean> data = new ArrayList<>();
-						for (int i = 0; i < others.size(); i++) {
-							TuchongEntity.FeedListBean feedListBean = others.get(i);
-							if ("post".equals(feedListBean.getType())) {
-								data.add(feedListBean.getEntry());
-							}
-						}
+		BannerData data2 = new BannerData();
+		data2.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585820241903&di=0166c4a0b24c222467501f8475c3c865&imgtype=0&src=http%3A%2F%2Fpic17.nipic.com%2F20111015%2F3191817_155116009376_2.jpg");
 
+		datas.add(data1);
+		datas.add(data2);
+		datas.add(data1);
+		datas.add(data2);
 
-						//刷新数据之后，需要重新设置是否支持自动轮播
-						mBanner.setAutoPlayAble(data.size() > 1);
-						mBanner.setIsClipChildrenMode(true);
-						//老方法，不推荐使用
-						mBanner.setData(R.layout.layout_fresco_imageview, data, null);
+		mXBanner.setAutoPlayAble(true);
+		//mXBanner.setIsClipChildrenMode(true);
+		mXBanner.setBannerData(R.layout.layout_fresco_imageview, datas);
 
-						//刷新数据之后，需要重新设置是否支持自动轮播
-						mBanner2.setAutoPlayAble(data.size() > 1);
-						mBanner2.setIsClipChildrenMode(true);
-						mBanner2.setBannerData(R.layout.layout_fresco_imageview, data);
-
-
-						//刷新数据之后，需要重新设置是否支持自动轮播
-						mBanner3.setAutoPlayAble(data.size() > 1);
-						mBanner3.setIsClipChildrenMode(true);
-						mBanner3.setBannerData(R.layout.layout_fresco_imageview, data);
-
-						//刷新数据之后，需要重新设置是否支持自动轮播
-						mBanner4.setAutoPlayAble(data.size() > 1);
-						mBanner4.setIsClipChildrenMode(true);
-						mBanner4.setBannerData(R.layout.layout_fresco_imageview, data);
-
-					}
-				});
-	}*/
+	}
 
 	/**
 	 * 加载本地图片

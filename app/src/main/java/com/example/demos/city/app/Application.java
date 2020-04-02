@@ -48,7 +48,7 @@ public class Application extends android.app.Application {
 		mApplication = this;
 		mCityDB = openCityDB();// 这个必须最先复制完,所以我放在单线程中处理,待优化
 		initData();
-		SDKInitializer.initialize(this);
+		//SDKInitializer.initialize(this);
 	}
 
 	@Override
