@@ -13,11 +13,18 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.demos.R;
 import com.example.demos.toolbar1.GlideImageLoader;
+import com.example.demos.util.ScreenUtils;
+import com.stx.xhb.xbanner.XBanner;
+import com.stx.xhb.xbanner.entity.LocalImageInfo;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -53,6 +60,9 @@ public class AppBarActivity4 extends AppCompatActivity implements OnBannerListen
 
 	private Fragment[] mFragmentArrays = new Fragment[6];
 	private String[] mTabTitles = new String[6];
+
+	//获取控件
+	XBanner mXBanner;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +125,16 @@ public class AppBarActivity4 extends AppCompatActivity implements OnBannerListen
 		//初始化TabLayout，增加Tab，同时关联ViewPager
 		mTabLayout = (TabLayout) findViewById(R.id.tabs);
 		mTabLayout.setupWithViewPager(mViewPager);
+
+		mXBanner = (XBanner) findViewById(R.id.banner3);
+
+		LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ScreenUtils.getScreenWidth(this) / 2);
+		mXBanner.setLayoutParams(layoutParams);
+
+		initBanner(mXBanner);
+
+		//initData();
+		initLocalImage();
 
 
 
@@ -235,4 +255,107 @@ public class AppBarActivity4 extends AppCompatActivity implements OnBannerListen
 	public void OnBannerClick(int position) {
 
 	}
+
+
+
+
+
+
+
+
+
+	/**
+	 * 初始化XBanner
+	 */
+	private void initBanner(XBanner banner) {
+		//设置广告图片点击事件
+		banner.setOnItemClickListener(new XBanner.OnItemClickListener() {
+			@Override
+			public void onItemClick(XBanner banner, Object model, View view, int position) {
+				Toast.makeText(AppBarActivity4.this, "点击了第" + (position + 1) + "图片", Toast.LENGTH_SHORT).show();
+			}
+		});
+		//加载广告图片
+		banner.loadImage(new XBanner.XBannerAdapter() {
+			@Override
+			public void loadBanner(XBanner banner, Object model, View view, int position) {
+				//此处适用Fresco加载图片，可自行替换自己的图片加载框架
+				/*SimpleDraweeView draweeView = (SimpleDraweeView) view;
+				TuchongEntity.FeedListBean.EntryBean listBean = ((TuchongEntity.FeedListBean.EntryBean) model);
+				String url = "https://photo.tuchong.com/" + listBean.getImages().get(0).getUser_id() + "/f/" + listBean.getImages().get(0).getImg_id() + ".jpg";
+				draweeView.setImageURI(Uri.parse(url));*/
+
+//                加载本地图片展示
+                ((ImageView)view).setImageResource(((LocalImageInfo) model).getXBannerUrl());
+			}
+		});
+	}
+
+	/**
+	 * 初始化数据
+	 */
+	/*private void initData() {
+		//加载网络图片资源
+		String url = "https://api.tuchong.com/2/wall-paper/app";
+		OkHttpUtils
+				.get()
+				.url(url)
+				.build()
+				.execute(new StringCallback() {
+					@Override
+					public void onError(Call call, Exception e, int id) {
+						Toast.makeText(ClipChildrenModeActivity.this, "加载广告数据失败", Toast.LENGTH_SHORT).show();
+					}
+
+					@Override
+					public void onResponse(String response, int id) {
+						TuchongEntity advertiseEntity = new Gson().fromJson(response, TuchongEntity.class);
+						List<TuchongEntity.FeedListBean> others = advertiseEntity.getFeedList();
+						List<TuchongEntity.FeedListBean.EntryBean> data = new ArrayList<>();
+						for (int i = 0; i < others.size(); i++) {
+							TuchongEntity.FeedListBean feedListBean = others.get(i);
+							if ("post".equals(feedListBean.getType())) {
+								data.add(feedListBean.getEntry());
+							}
+						}
+
+
+						//刷新数据之后，需要重新设置是否支持自动轮播
+						mBanner.setAutoPlayAble(data.size() > 1);
+						mBanner.setIsClipChildrenMode(true);
+						//老方法，不推荐使用
+						mBanner.setData(R.layout.layout_fresco_imageview, data, null);
+
+						//刷新数据之后，需要重新设置是否支持自动轮播
+						mBanner2.setAutoPlayAble(data.size() > 1);
+						mBanner2.setIsClipChildrenMode(true);
+						mBanner2.setBannerData(R.layout.layout_fresco_imageview, data);
+
+
+						//刷新数据之后，需要重新设置是否支持自动轮播
+						mBanner3.setAutoPlayAble(data.size() > 1);
+						mBanner3.setIsClipChildrenMode(true);
+						mBanner3.setBannerData(R.layout.layout_fresco_imageview, data);
+
+						//刷新数据之后，需要重新设置是否支持自动轮播
+						mBanner4.setAutoPlayAble(data.size() > 1);
+						mBanner4.setIsClipChildrenMode(true);
+						mBanner4.setBannerData(R.layout.layout_fresco_imageview, data);
+
+					}
+				});
+	}*/
+
+	/**
+	 * 加载本地图片
+	 */
+	private void initLocalImage() {
+		List<LocalImageInfo> data = new ArrayList<>();
+		data.add(new LocalImageInfo(R.drawable.banner_a));
+		data.add(new LocalImageInfo(R.drawable.banner_b));
+		data.add(new LocalImageInfo(R.drawable.banner_c));
+		mXBanner.setBannerData(data);
+		mXBanner.setAutoPlayAble(true);
+	}
+
 }

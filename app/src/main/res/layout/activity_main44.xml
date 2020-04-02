@@ -76,7 +76,7 @@
                 <LinearLayout
                     android:id="@+id/head_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="400dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     app:layout_collapseMode="pin"
@@ -89,6 +89,22 @@
                         app:indicator_width="8dp"
                         app:indicator_height="8dp"
                         app:indicator_drawable_selected="@drawable/bg_banner_selected"/>
+
+                    <com.stx.xhb.xbanner.XBanner
+                        android:id="@+id/banner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:AutoPlayTime="3000"
+                        app:clipChildrenLeftRightMargin="20dp"
+                        app:isAutoPlay="false"
+                        app:isClipChildrenMode="true"
+                        app:isHandLoop="false"
+                        app:isShowIndicatorOnlyOne="true"
+                        app:isShowNumberIndicator="false"
+                        app:pageChangeDuration="800"
+                        app:pointsVisibility="false" />
+
 
                 </LinearLayout>
 
