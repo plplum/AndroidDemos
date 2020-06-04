@@ -140,21 +140,21 @@ public class AppBarActivity3 extends AppCompatActivity {
 		//collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.white));
 
 
-		appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+		/*appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
 			@Override
 			public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 				if (verticalOffset <= -headLayout.getHeight() / 2) {
-					collapsingToolbarLayout.setTitle("This is Title");
+					collapsingToolbarLayout.setTitle("This is Title 1");
 					//使用下面两个CollapsingToolbarLayout的方法设置展开透明->折叠时你想要的颜色
 					//collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 					//collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.white));
 				} else {
-					collapsingToolbarLayout.setTitle("This is Title");
+					collapsingToolbarLayout.setTitle("This is Title 2");
 					//collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.colorAccent));
 
 				}
 			}
-		});
+		});*/
 	}
 
 

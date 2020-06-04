@@ -354,6 +354,10 @@
         <activity
             android:name=".toolbar.AppBarActivity"
             android:theme="@style/no_actionbar_theme1" />
+
+        <activity
+            android:name=".toolbar.AppBarActivity5"
+            android:theme="@style/no_actionbar_theme1" />
         <activity
             android:name=".toolbar.AppBarActivity1"
             android:theme="@style/no_actionbar_theme1" />

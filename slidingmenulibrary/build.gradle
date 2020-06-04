@@ -25,4 +25,7 @@ dependencies {
     compile 'com.android.support:support-v4:24.2.0'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
 
+
+
+
 }

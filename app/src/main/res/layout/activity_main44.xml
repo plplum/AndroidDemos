@@ -70,6 +70,7 @@
                 app:expandedTitleMarginEnd="64dp"
                 app:expandedTitleMarginStart="48dp"
                 android:fitsSystemWindows="true"
+                app:title="2222222222"
                 android:background="@color/white"
                 app:contentScrim="?attr/colorPrimary"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">

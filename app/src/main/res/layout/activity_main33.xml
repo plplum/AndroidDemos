@@ -18,6 +18,7 @@
             app:expandedTitleMarginStart="48dp"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
+            app:title="标题"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <LinearLayout

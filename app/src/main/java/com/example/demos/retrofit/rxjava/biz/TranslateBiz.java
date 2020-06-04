@@ -7,7 +7,7 @@ import com.example.demos.retrofit.rxjava.service.TranslateService1;
 import com.example.demos.retrofit.rxjava.util.HttpClient1;
 import com.example.demos.retrofit.util.HttpClient;
 
-import org.reactivestreams.Subscriber;
+//import org.reactivestreams.Subscriber;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
